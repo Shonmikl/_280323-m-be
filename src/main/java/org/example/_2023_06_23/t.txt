@@ -1,0 +1,48 @@
+**********************
+Person
+ - name
+ - age
+ - surname
+ - Animal
+
+Animal
+ - name
+ - age
+ - poroda
+
+Cat ext Animal
+Dog ext Animal
+
+interface CommandAnimal
+ - doCommand()
+
+ Main
+  - main
+
+*****************************************************
+Bank
+ - name
+ - Customer[]
+ - Product[]
+
+-  Customer
+ - name
+ - Card
+
+Product
+ -
+ -
+
+Card
+ -
+ -
+ -
+interface Done
+ - done()
+
+Main
+ - main
+
+ *****************************************
+
+
