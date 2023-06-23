@@ -1,6 +1,10 @@
 package org.example._2023_06_23.ex1;
 
+import java.util.List;
+
 public class A implements Inter1, Inter2, Inter3 {
+    String[] s;
+    List<A> list;
     public void get() {}
 
     @Override
