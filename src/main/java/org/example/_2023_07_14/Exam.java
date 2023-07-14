@@ -33,6 +33,19 @@ public class Exam {
 
 //        System.out.println(searchUniqueDigitEx1(arr));
 //        System.out.println(searchUniqueDigitEx2(arrUnsorted));
-        System.out.println(55 ^ 55);
+//        System.out.println(55 ^ 5);
+
+        //0000 1000
+        //0000 0111
+        //0000 1111
+        System.out.println(8 ^ 7);
+
+        int w = 0b00001000;
+        int r = 0b00000111;
+
+        int x = 0xF7F;
+        int q = 0x96A;
+
+        System.out.println(x & q);
     }
 }
