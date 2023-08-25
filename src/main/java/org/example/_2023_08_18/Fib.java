@@ -22,9 +22,6 @@ public class Fib {
     }
 
     public static long fibRec(int fibIndex) {
-        if (fibIndex < 0) {
-            throw new IllegalArgumentException();
-        }
         if (fibIndex == 0) {
             return 0;
         }
