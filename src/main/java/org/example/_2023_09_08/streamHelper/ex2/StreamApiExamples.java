@@ -1,10 +1,6 @@
 package org.example._2023_09_08.streamHelper.ex2;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public class StreamApiExamples {
     public static void main(String[] args) {
@@ -13,7 +9,7 @@ public class StreamApiExamples {
         // Примеры использования методов Stream API
 
         // 1. count(): Выводит количество элементов в потоке (10 в данном случае)
-        long count = numbers.stream().count();
+        long count = numbers.size();
         System.out.println("Count: " + count);
 
         // 2. max(): Выводит максимальный элемент в потоке (20 в данном случае)
@@ -34,7 +30,7 @@ public class StreamApiExamples {
 
         // 6. forEach(): Выводит каждый элемент в потоке
         System.out.print("ForEach: ");
-        numbers.stream().forEach(System.out::print);
+        numbers.forEach(System.out::print);
         System.out.println();
 
         // 7. distinct(): Выводит список с удаленными повторяющимися элементами
@@ -58,7 +54,7 @@ public class StreamApiExamples {
         System.out.println("Limit: " + limitList);
 
         // 12. toArray(): Преобразует поток в массив ([1, 20, 3, 4, 1, 1, 5, 6, 7, 8] в данном случае)
-        Integer[] arr = numbers.stream().toArray(Integer[]::new);
+        Integer[] arr = numbers.toArray(Integer[]::new);
         System.out.println("Array: " + Arrays.toString(arr));
 
         // 13. reduce(): Суммирует все элементы в потоке и выводит результат (56 в данном случае)
@@ -66,7 +62,7 @@ public class StreamApiExamples {
         sum.ifPresent(value -> System.out.println("Sum: " + value));
 
         // 14. collect(): Собирает элементы в потоке в коллекцию Set (без повторений) и выводит результат
-        Set<Integer> set = numbers.stream().collect(Collectors.toSet());
+        Set<Integer> set = new HashSet<>(numbers);
         System.out.println("Set: " + set);
 
         // 15. mapToInt(): Преобразует поток в IntStream и суммирует все элементы в потоке (56 в данном случае)

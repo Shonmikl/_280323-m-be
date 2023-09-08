@@ -1,18 +1,15 @@
 package org.example._2023_09_08.streamHelper.ex1;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
- * - создаете стрим
- *
+ * - создаете стрим*
  * - разбиваете задание на действия
  * - находите соответствующий метод
  * - смотрите какой у него ФИ
  * - смотрите на сигнатуру абстрактного метода
  *      - смотрите перегружен ли он или нет
  * - пишите реализацию
- *
  * - собираете терминальным оператором
  */
 public class StreamEx1 {
@@ -28,7 +25,7 @@ public class StreamEx1 {
         List<String> names = Arrays.asList("Dima", "Roman", "Vadim", "Evgeny", "Vladislav");
         //map()
         List<Integer> namesLength = names.stream()
-                .map(v -> v.length())
+                .map(String::length)
                 .toList();
         System.out.println(namesLength);
         System.out.println("********************************************");
@@ -67,7 +64,7 @@ public class StreamEx1 {
 
         List<String> namesR = Arrays.asList("Dima", "Roman", "Vadim", "Evgeny", "Vladislav");
         //forEach()
-        namesR.stream().forEach(System.out::println);
+        namesR.forEach(System.out::println);
         System.out.println("********************************************");
 
         List<Integer> numbersQQ = Arrays.asList(1, 1, 9, 4, 5, 6);
@@ -101,14 +98,13 @@ public class StreamEx1 {
         List<Integer> findQ = Arrays.asList(1, 1, 9, 4, 5, 6);
         //reduce()
         Optional<Integer> sum = findQ.stream()
-                .reduce((el1, el2) -> el1 + el2);
+                .reduce(Integer::sum);
         System.out.println(sum);
         System.out.println("********************************************");
 
         List<Integer> findQX = Arrays.asList(1, 1, 9, 4, 5, 6);
         //collect()
-        Set<Integer> set = findQX.stream()
-                .collect(Collectors.toSet());
+        Set<Integer> set = new HashSet<>(findQX);
         System.out.println(set);
         System.out.println("********************************************");
 

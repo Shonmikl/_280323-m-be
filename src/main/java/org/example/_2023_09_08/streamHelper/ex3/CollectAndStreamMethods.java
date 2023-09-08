@@ -1,9 +1,6 @@
 package org.example._2023_09_08.streamHelper.ex3;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CollectAndStreamMethods {
@@ -35,14 +32,12 @@ public class CollectAndStreamMethods {
         }
 
         // Пример использования Collectors.mapping() - преобразование сотрудников в список их имен
-        List<String> names = employees.stream()
-                .collect(Collectors.mapping(Employee::getFirstName, Collectors.toList()));
+        List<String> names = employees.stream().map(Employee::getFirstName).collect(Collectors.toList());
         System.out.println("\nПример использования Collectors.mapping():");
         System.out.println(names);
 
         // Пример использования Collectors.toSet() - преобразование сотрудников в множество
-        Set<Employee> employeeSet = employees.stream()
-                .collect(Collectors.toSet());
+        Set<Employee> employeeSet = new HashSet<>(employees);
         System.out.println("\nПример использования Collectors.toSet():");
         System.out.println(employeeSet);
     }

@@ -2,7 +2,6 @@ package org.example._2023_09_08.streamHelper.ex3;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class MapExample {
     public static void main(String[] args) {

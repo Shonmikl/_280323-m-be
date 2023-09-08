@@ -22,11 +22,9 @@ public class GroupingByExample {
         
         // Пример 3: Группировка списка объектов по их свойству "тип"
         class Person {
-            private String name;
-            private String type;
+            private final String type;
 
             public Person(String name, String type) {
-                this.name = name;
                 this.type = type;
             }
 
