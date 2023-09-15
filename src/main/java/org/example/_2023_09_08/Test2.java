@@ -1,4 +1,4 @@
-package org.example._2023_09_08.streamHelper;
+package org.example._2023_09_08;
 
 import java.util.List;
 import java.util.stream.Collectors;
